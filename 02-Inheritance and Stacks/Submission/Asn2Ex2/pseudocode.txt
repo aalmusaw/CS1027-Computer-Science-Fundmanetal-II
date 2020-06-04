@@ -1,0 +1,43 @@
+//Ali Al-Musawi
+//AALMUSAW@UWO.CA
+
+//Algorithm that simulates eating yellow candies from a stack while preserving the order.
+//The algorithm keeps track of how many yellow candies have been eaten as well as the leftover count.
+
+// Creating stacks for the simulation:
+1. initialCandyStack = new Stack() 
+2. tempStack = new Stack()
+
+
+// Setting a consumption counter and the initial order of the candies:
+3. bananaCounter = 0
+4. initialOrder = {red, purple, green, pink, yellow, pink, red, yellow, green, yellow}
+
+// Building the initial candy stack:
+5. for candy in reverse(intialOrder)
+	initialCandyStack.push(candy)
+
+// Eating the yellow candies one at a time and removing the rest to a temporary stack.
+6. while not initialCandyStack.isEmpty()
+	if initialCandyStack.peek() is yellow
+		initialCandyStack.pop()
+		increment(bananaCounter)
+	else
+		tempStack.push(initialCandyStack.pop())
+
+// Returning the candies to the initial stack, which is essentially the reverse order of the temporary stack.
+// This move is needed to preserve the initial order of the candy stack.
+7. while not tempStack.isEmpty()
+	initialCandyStack.push(tempStack.pop())
+
+// Setting the leftover candies counter.
+8. leftoverCounter = 10 - bananaCounter
+
+// Printing the counters
+9. print(bananaCounter + "banana candies have been eaten.")
+   print(leftoverCounter + "candies are remaining")
+
+	
+		
+		
+	

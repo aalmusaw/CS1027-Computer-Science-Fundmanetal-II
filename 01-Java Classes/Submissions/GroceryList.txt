@@ -1,0 +1,10 @@
+Tuna     10.5    1
+Onions   2.99    1
+beans    1.99    6
+Pasta    2.99    1
+Rice     11.9    1
+Bread    3.50    1
+lentils  2.99    1
+Butter   3.50    1
+Eggs     5.00    12
+Cheese   9.90    1
